@@ -1,0 +1,61 @@
+//Section 1.5.2: A first look at Member Functions
+
+/**
+ * What is a member function?
+ * 
+ * The if condition
+ * item1.isbn() == item2.isbn()
+ * calls a member function named isbn. A member function is a function that is
+ * defined as part of a class. Member functions are sometimes referred to as 
+ * methods. Usually, we call a member function on behalf of an object. For 
+ * example, the first part of the left-hand operand of the equality expression:
+ * item1.isbn
+ * uses the dot operator (the "." operator) to saw that we want "the isbn member 
+ * of the object named item1." The dot operator applies only to objects of class 
+ * type. The left-hand operand must be an object of class type, and the right-hand 
+ * operand must name a member of that type. The result of the dot operator is the 
+ * member named by the right-hand operand.
+ * 
+ * When we use the dot operator to access a member function, we usually do so to 
+ * call that function. We call a function using the call operator (the () operator).
+ * The call operator is a pair of parantheses that enclose a (possibly empty) list 
+ * of arguments. The isbn member function does not take an argument, thus
+ * item1.isbn()
+ * calls the isbn function that is a member of the object named item1. This function 
+ * returns the ISBN stored in item1.
+ */
+
+#include <iostream>
+#include "Sales_item.h"
+
+using namespace std;
+
+int main(){
+    /**A similar program that adds two Sales_items should check whether the objects 
+     * have the same ISBN. We'll do as follows:
+     * */
+     
+     Sales_item item1, item2;
+     cin >> item1 >> item2;
+     
+     //first check that item1 and item2 represent the same book
+     if (item1.isbn() == item2.isbn()){
+         std::cout << item1 + item2 <<endl;
+         return 0;
+     } else{
+         cerr <<"Data must refer to same ISBN" << std <<endl;
+         return -1; //indicate failure
+     }
+     
+     /**
+      * The difference between this program and the previous version is the if
+      * and its associated else branch. Even without understanding the if condition,
+      * we know what this program does. If the condition succeeds, then we write the 
+      * same output as before and return 0, indicating success. If the condition fails,
+      * we execute the block following the else, which prints a message and returns 
+      * an error indicator.
+      * */
+      
+      
+     
+}
