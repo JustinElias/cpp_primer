@@ -1,0 +1,29 @@
+//Exercies Section 1.2 
+
+main(){
+cout << "Hello, World" <<endl;
+
+//Exercise 1.3: Write a program to print Hello, World
+
+#include <iostream>
+
+using namespace std;
+
+/*
+Exercise 1.4: Our program used the addition operator, +, to add two numbers. 
+Write a program that uses the multiplicatioin, *, to print the product instead
+*/
+
+int num1 =5, num2=9; //declare 2 variables and initialize to 0
+
+cout << "The product of these two numbers are: " << num1 * num2 <<endl;
+
+/*
+Explain whether the following program fragment is legal.
+std::cout << "The sum of " <<v1;
+<< " and " << v2;
+<< " is " << v1 + v2 << std::endl;
+
+It is legal, it prints out: "The sum of v1 and v2 is v1+v2"
+*/
+}
